@@ -1,13 +1,6 @@
 # Pull base image.
-FROM quay.io/eris/base
+FROM quay.io/eris/build
 MAINTAINER Eris Industries <support@erisindustries.com>
-
-#-----------------------------------------------------------------------------
-# dependencies
-RUN apt-get update && \
-  apt-get install -y --no-install-recommends \
-    libgmp3-dev jq && \
-  rm -rf /var/lib/apt/lists/*
 
 #-----------------------------------------------------------------------------
 # install epm
